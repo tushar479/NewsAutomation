@@ -1,0 +1,11 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="lbl" class="col-sm-2 control-label col-md-offset-3"></label>
+
+        <select class="form-control" style="width:auto;" ng-change="PopulateEvent(userChoice)" ng-model="userChoice">
+            <option ng-repeat="event in myoptions" value="{{event.value}}">{{event.label}}</option>
+            <option value="" selected>--- Select an option---</option>
+        </select>
+    </div>
+    <div class="editable" style="width:50%;border: 3px solid green;margin: auto; padding-left: 10px; " contenteditable="true"></div>
+</form>

@@ -1,0 +1,284 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">Select Event</label>
+        <div class="col-sm-2 ">
+        <select class="form-control" style="width:auto;" ng-change="PopulateEventDetails(userChoice)" ng-model="userChoice">
+            <option ng-repeat="event in Events" value="{{event.eventID}}">{{event.eventName}}</option>
+            <option value="">--- Select an option---</option>
+        </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">Event ID</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="EventID" ng-model="responseObj.eID"  placeholder="Event ID">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Event Name</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="EventName" ng-model="responseObj.eName" placeholder="Event Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">PGRaceURL</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="PGRaceURL" ng-model="responseObj.epGRaceURL" placeholder="PGRaceURL">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">RaceIntro</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="RaceIntro" ng-model="responseObj.eraceIntro" placeholder="RaceIntro">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">RaceDate</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="RaceDate" ng-model="responseObj.eraceDate" placeholder="RaceDate">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Sponsor1</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Sponsor1" ng-model="responseObj.esponsor1" placeholder="Sponsor1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">Sponsor2</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Sponsor2" ng-model="responseObj.esponsor2" placeholder="Sponsor2">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">State</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="State" ng-model="responseObj.estate" placeholder="State">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">City</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="City" ng-model="responseObj.ecity" placeholder="City">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Season</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Season" ng-model="responseObj.eseason" placeholder="Season">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">ResultsURL</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="ResultsURL" ng-model="responseObj.eresultsURL" placeholder="ResultsURL">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Race_Page_URL</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Race_Page_URL" ng-model="responseObj.erace_Page_URL" placeholder="Race_Page_URL">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">WebsiteURL</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="WebsiteURL" ng-model="responseObj.ewebsiteURL" placeholder="WebsiteURL">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Purse</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Purse" ng-model="responseObj.epurse" placeholder="Purse">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">Course1</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Course1" ng-model="responseObj.ecourse1" placeholder="Course1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Course1AgeGroups</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Course1AgeGroups" ng-model="responseObj.ecourse1AgeGroups" placeholder="Course1AgeGroups">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">Course1CraftTypes</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Course1CraftTypes" ng-model="responseObj.ecourse1CraftTypes" placeholder="Course1CraftTypes">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Course2</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Course2" ng-model="responseObj.ecourse2" placeholder="Course2">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">Event</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Event" ng-model="responseObj.eevent" placeholder="Event">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Wind</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Wind" ng-model="responseObj.ewind" placeholder="Wind">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">Sky</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Sky" ng-model="responseObj.esky" placeholder="Sky">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Temp</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Temp" ng-model="responseObj.etemp" placeholder="Temp">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">Surf</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Surf" ng-model="responseObj.esurf" placeholder="Surf">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Participant</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Participant" ng-model="responseObj.eparticipant" placeholder="Participant">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">OverallMaleCourse1</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="OverallMaleCourse1" ng-model="responseObj.eoverallMaleCourse1" placeholder="OverallMaleCourse1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">Gender</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="Gender" ng-model="responseObj.egender" placeholder="Gender">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label col-md-offset-3">OverallMaleCourse1Time</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="OverallMaleCourse1Time" ng-model="responseObj.eoverallMaleCourse1Time" placeholder="OverallMaleCourse1Time">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">OverallMaleCourse1Craft</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="OverallMaleCourse1Craft" ng-model="responseObj.eoverallMaleCourse1Craft" placeholder="OverallMaleCourse1Craft">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">2ndOverallMaleCourse1Craft</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="2ndOverallMaleCourse1Craft" ng-model="responseObj.esecondndOverallMaleCourse1Craft" placeholder="2ndOverallMaleCourse1Craft">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">2ndOverallMaleCourse1</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="2ndOverallMaleCourse1" ng-model="responseObj.esecondOverallMaleCourse1" placeholder="2ndOverallMaleCourse1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">2ndOverallMaleCourse1Time</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="2ndOverallMaleCourse1Time" ng-model="responseObj.esecondOverallMaleCourse1Time" placeholder="2ndOverallMaleCourse1Time">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">3rdOverallMaleCourse1</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="3rdOverallMaleCourse1" ng-model="responseObj.ethirdOverallMaleCourse1" placeholder="3rdOverallMaleCourse1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">OverallFemaleCourse1</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="OverallFemaleCourse1" ng-model="responseObj.eoverallFemaleCourse1" placeholder="OverallFemaleCourse1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">OverallFemaleCourse1Time</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="OverallFemaleCourse1Time" ng-model="responseObj.eoverallFemaleCourse1Time" placeholder="OverallFemaleCourse1Time">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">OverallFemaleCourse1Craft</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="OverallFemaleCourse1Craft" ng-model="responseObj.eoverallFemaleCourse1Craft" placeholder="OverallFemaleCourse1Craft">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">2ndOverallFemaleCourse1</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="2ndOverallFemaleCourse1" ng-model="responseObj.esecondOverallFemaleCourse1" placeholder="2ndOverallFemaleCourse1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">2ndOverallFemaleCourse1Craft</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="2ndOverallFemaleCourse1Craft" ng-model="responseObj.esecondOverallFemaleCourse1Craft" placeholder="2ndOverallFemaleCourse1Craft">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">3rdOverallFemaleCourse1</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="3rdOverallFemaleCourse1" ng-model="responseObj.ethirdOverallFemaleCourse1" placeholder="3rdOverallFemaleCourse1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">3rdOverallFemaleCourse1Craft</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="3rdOverallFemaleCourse1Craft" ng-model="responseObj.ethirdOverallFemaleCourse1Craft" placeholder="3rdOverallFemaleCourse1Craft">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">4thOverallFemaleCourse1</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="4thOverallFemaleCourse1" ng-model="responseObj.efourthOverallFemaleCourse1" placeholder="4thOverallFemaleCourse1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">PhotographerName</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="PhotographerName" ng-model="responseObj.ephotographerName" placeholder="PhotographerName">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">PhotoURL</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="PhotoURL" ng-model="responseObj.ephotoURL" placeholder="PhotoURL">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">ReplayURL</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="ReplayURL" ng-model="responseObj.ereplayURL" placeholder="ReplayURL">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label col-md-offset-3">StreamURL</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="StreamURL" ng-model="responseObj.estreamURL" placeholder="StreamURL">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10 col-md-offset-5">
+            <button type="submit" class="btn btn-default" ng-click="redirect()">Generate Template</button>
+        </div>
+    </div>
+</form>
